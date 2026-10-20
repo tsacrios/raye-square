@@ -1,0 +1,38 @@
+html.quick-html, .quick-body, .quick-body #root { background: transparent !important; width: 100%; height: 100%; margin: 0; overflow: clip; }
+.quick-shell { position: fixed; inset: 0; isolation: isolate; color: #f4f5f7; font-family: "Segoe UI", sans-serif; user-select: none; -webkit-user-select: none; }
+.quick-dim { position: absolute; inset: 0; background: linear-gradient(90deg, #00000008 0%, #00000015 55%, #00000055 100%); }
+.quick-sidebar { position: absolute; inset: 0 0 0 auto; width: clamp(340px, 28vw, 530px); max-width: 100vw; display: flex; flex-direction: column; padding: 4vh clamp(24px, 2.2vw, 42px) 3vh; background: linear-gradient(145deg, #252a32f0, #11141df5 75%); border-left: 1px solid #ffffff24; box-shadow: -20px 0 80px #0005; }
+.quick-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: #cbd1da; font-size: 12px; }
+.quick-brand { letter-spacing: 3px; font-size: 10px; font-weight: 600; }
+.quick-header time { font-variant-numeric: tabular-nums; font-size: 18px; }
+.quick-intro { flex: 0 0 auto; margin: 5vh 0 3vh; }
+.quick-eyebrow { color: #9eacbd; letter-spacing: 2.5px; font-size: 9px; }
+.quick-intro h1 { font-size: clamp(25px, 2vw, 34px); line-height: 1.1; letter-spacing: -0.9px; font-weight: 500; margin: 12px 0; }
+.quick-intro p { font-size: 13px; color: #aeb9c8; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.quick-content { flex: 1; min-height: 0; overflow: auto; padding: 6px; margin: 0 -6px; scrollbar-width: none; overscroll-behavior: contain; }
+.quick-content::-webkit-scrollbar { display: none; }
+.quick-row { display: flex; align-items: center; gap: 18px; width: 100%; min-height: 64px; margin: 0 0 10px; padding: 16px 18px; text-align: left; color: inherit; font: inherit; font-size: clamp(14px, 1vw, 17px); background: #ffffff06; border: 1px solid #ffffff10; border-radius: 13px; cursor: pointer; transition: background 120ms, border-color 120ms; }
+.quick-row:hover { background: #ffffff12; }
+.quick-row:focus, .quick-row:focus-visible { background: #ffffff17; border-color: #ffffffd0; outline: 2px solid #ffffffd0; outline-offset: 2px; }
+.quick-row > svg { width: 23px; height: 23px; flex: 0 0 23px; color: #dfe4ed; }
+.quick-row > span { flex: 1; min-width: 0; }
+.quick-row small { display: block; color: #9faab9; font-size: 11px; margin-top: 5px; font-weight: 400; }
+.quick-row:disabled { opacity: 0.35; cursor: default; }
+.quick-volume { align-items: flex-start; }
+.quick-volume > svg { margin-top: 2px; }
+.quick-volume-line { display: flex; gap: 16px; align-items: center; margin-top: 14px; }
+.quick-meter { flex: 1; height: 4px; background: #ffffff25; border-radius: 10px; overflow: hidden; }
+.quick-meter > span { display: block; height: 100%; background: #e9eef6; border-radius: inherit; transition: width 120ms; }
+.quick-volume-line strong { font-size: 12px; min-width: 36px; font-variant-numeric: tabular-nums; font-weight: 500; text-align: right; }
+.quick-confirm > p { font-size: 14px; line-height: 1.7; color: #c1cad6; margin: 0 0 30px; }
+.quick-danger { color: #ffccd0; background: #ad374d25; }
+.quick-error { font-size: 11px; line-height: 1.6; color: #f2c5ab; padding: 10px; overflow-wrap: anywhere; }
+.quick-footer { flex: 0 0 auto; border-top: 1px solid #ffffff15; padding-top: 2.4vh; margin-top: 2vh; color: #aeb9c6; font-size: 11px; }
+.quick-controller { display: flex; align-items: center; gap: 8px; }
+.quick-controller i { width: 5px; height: 5px; background: #788391; border-radius: 50%; }
+.quick-controller i.connected { background: #b8dca8; }
+.quick-footer > div { display: flex; align-items: center; gap: 24px; margin-top: 14px; }
+.quick-footer > div span { display: inline-flex; align-items: center; gap: 8px; }
+.quick-footer b { font-size: 18px; color: #e6ebf2; font-weight: 400; }
+@media (max-height: 700px) { .quick-sidebar { padding-top: 3vh; } .quick-intro { margin: 3vh 0 2vh; } .quick-row { min-height: 52px; padding: 10px 14px; margin-bottom: 8px; } .quick-footer { padding-top: 12px; margin-top: 12px; } }
+@media (prefers-reduced-motion: reduce) { .quick-shell * { transition: none !important; } }

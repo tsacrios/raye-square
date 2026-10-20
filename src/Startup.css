@@ -1,0 +1,29 @@
+.raye-startup { position: fixed; inset: 0; z-index: 100000; overflow: hidden; background: #050608; color: #e8ecf4; font-family: "Segoe UI", sans-serif; transition: opacity 700ms ease; }
+.startup-exit { opacity: 0; pointer-events: none; }
+.startup-notice { width: min(680px, 82vw); margin: auto; min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.startup-small-brand { font-size: 11px; letter-spacing: 5px; color: #8b97aa; margin-bottom: 35px; }
+.startup-warning-icon { width: 38px; height: 38px; border: 1px solid #a7b3c5; border-radius: 50%; display: grid; place-items: center; font-size: 24px; }
+.startup-notice h1 { font-size: clamp(24px, 3vw, 42px); font-weight: 500; letter-spacing: -.03em; margin: 20px 0; }
+.startup-notice p { line-height: 1.7; font-size: clamp(14px, 1.1vw, 18px); color: #b5c0d2; margin: 0 0 15px; }
+.startup-notice button { margin-top: 24px; border: 1px solid #ffffff44; border-radius: 30px; padding: 14px 26px; color: #e8ecf4; background: #ffffff0a; font: inherit; }
+.startup-notice button:focus { outline: 2px solid #e8ecf4; outline-offset: 5px; }
+.startup-notice button:disabled { opacity: .45; }
+.startup-stage { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; isolation: isolate; }
+.startup-halo { position: absolute; inset: -30%; z-index: -2; background: radial-gradient(ellipse at 50% 60%, #2b467052, #111a2e38 35%, transparent 62%); animation: startup-halo 8s ease-out both; }
+.startup-orbit { position: absolute; width: 78vw; height: 78vw; max-width: 1500px; max-height: 1500px; border: 1px solid #9cbada24; border-radius: 50%; transform: perspective(900px) rotateX(67deg); z-index: -1; animation: startup-orbit 7600ms cubic-bezier(.2,.7,.2,1) both; }
+.orbit-two { width: 95vw; height: 95vw; border-color: #7798c518; animation-delay: 180ms; }
+.startup-horizon { position: absolute; left: 12%; right: 12%; top: 58%; height: 2px; background: linear-gradient(90deg, transparent, #a8c8f073, transparent); filter: blur(1px); z-index: -1; animation: startup-horizon 8s ease both; }
+.startup-logo-wrap { width: min(68vw, 920px); animation: startup-logo 6400ms cubic-bezier(.18,.7,.2,1) both; }
+.startup-logo-wrap img { display: block; width: 100%; height: auto; max-height: 28vh; object-fit: contain; filter: drop-shadow(0 14px 30px #0009); }
+.startup-wordmark { text-align: center; font-size: clamp(35px, 7vw, 105px); font-weight: 650; letter-spacing: -.055em; }
+.startup-tagline { margin-top: 40px; letter-spacing: 6px; font-size: 10px; color: #a5b5cc; animation: startup-caption 6s ease both; }
+.startup-load { position: absolute; bottom: 8vh; font-size: 12px; color: #7e8ea6; animation: startup-caption 6s ease both; }
+@keyframes startup-logo { 0% { opacity: 0; transform: translateY(24px) scale(.84); filter: blur(14px); clip-path: inset(0 100% 0 0); } 55% { opacity: 1; filter: blur(0); clip-path: inset(0 0 0 0); } 100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); clip-path: inset(0 0 0 0); } }
+@keyframes startup-halo { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
+@keyframes startup-orbit { from { opacity: 0; transform: perspective(900px) rotateX(78deg) scale(.6); } to { opacity: .8; transform: perspective(900px) rotateX(67deg) scale(1); } }
+@keyframes startup-horizon { from { opacity: 0; transform: scaleX(.1); } to { opacity: .8; transform: scaleX(1); } }
+@keyframes startup-caption { 0%, 65% { opacity: 0; transform: translateY(6px); } 100% { opacity: 1; transform: translateY(0); } }
+.startup-still *, .startup-still { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .raye-startup, .raye-startup * { animation: none !important; transition: none !important; } }
+@media (max-height: 550px) { .startup-small-brand { margin-bottom: 14px; } .startup-notice h1 { margin: 10px 0; } .startup-notice p { line-height: 1.4; margin-bottom: 8px; } .startup-notice button { margin-top: 12px; } }
+
