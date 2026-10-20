@@ -560,6 +560,8 @@ fn system_action(action: String) -> Result<(), String> {
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
+        .plugin(tauri_plugin_process::init())
         .manage(std::sync::Arc::new(GameSession::default()))
         .manage(std::sync::Arc::new(quick_menu::QuickState::default()))
         .on_window_event(|window, event| {

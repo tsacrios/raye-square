@@ -1,0 +1,6 @@
+.raye-updates { position: fixed; right: 18px; bottom: 18px; z-index: 20000; color: #fff; font-family: inherit; }
+.raye-updates section { width: min(360px, calc(100vw - 60px)); padding: 20px; border: 1px solid #555; border-radius: 16px; background: #171923; box-shadow: 0 8px 32px #0008; }
+.raye-updates p { line-height: 1.5; font-size: 14px; }
+.raye-updates button { margin: 4px; padding: 10px 14px; border: 1px solid #666; border-radius: 10px; background: #282c40; color: #fff; cursor: pointer; }
+.raye-updates button:focus-visible { outline: 3px solid #a8baff; }
+.raye-updates button:disabled { opacity: .6; cursor: wait; }

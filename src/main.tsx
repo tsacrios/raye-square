@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import Updates from "./Updates";
 import QuickMenu from "./QuickMenu";
 
 const quickMenu = new URLSearchParams(window.location.search).get("quick-menu") === "1";
@@ -10,5 +11,5 @@ if (quickMenu) {
 }
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>{quickMenu ? <QuickMenu /> : <App />}</React.StrictMode>,
+  <React.StrictMode>{quickMenu ? <QuickMenu /> : <><App /><Updates /></>}</React.StrictMode>,
 );
